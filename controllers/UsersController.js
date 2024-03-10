@@ -3,6 +3,7 @@
 const dbClient = require('../utils/db');
 
 class UsersController {
+  // UsersController class
   static async postNew(req, res) {
     const { email, password } = req.body;
     if (!email) {

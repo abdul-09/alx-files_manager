@@ -4,6 +4,7 @@ const redisClient = require('../utils/redis');
 const dbClient = require('../utils/db');
 
 class AppController {
+  // App controller class
   static getStatus(req, res) {
     if (redisClient.isAlive() && dbClient.isAlive()) {
       res.json({ redis: true, db: true });

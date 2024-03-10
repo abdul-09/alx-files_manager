@@ -5,6 +5,7 @@ const mongo = require('mongodb');
 const { pwdHashed } = require('./utils');
 
 class DBClient {
+  // class DBClient
   constructor() {
     const host = (process.env.DB_HOST) ? process.env.DB_HOST : 'localhost';
     const port = (process.env.DB_PORT) ? process.env.DB_PORT : 27017;

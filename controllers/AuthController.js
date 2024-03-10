@@ -7,6 +7,7 @@ const { getAuthzHeader, getToken, pwdHashed } = require('../utils/utils');
 const { decodeToken, getCredentials } = require('../utils/utils');
 
 class AuthController {
+  // Authorization control class
   static async getConnect(req, res) {
     const authzHeader = getAuthzHeader(req);
     if (!authzHeader) {

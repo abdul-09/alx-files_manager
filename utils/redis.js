@@ -4,6 +4,7 @@ const { createClient } = require('redis');
 const { promisify } = require('util');
 
 class RedisClient {
+  // configuring redis client
   constructor() {
     this.client = createClient();
     this.client.on('error', (err) => console.log(err));
