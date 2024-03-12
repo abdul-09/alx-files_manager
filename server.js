@@ -3,8 +3,9 @@
 const express = require("express");
 const router = require("./routes/index");
 
+const port = parseInt(process.env.PORT, 10) || 5000;
+
 const server = express();
-const PORT = process.env.PORT ? process.env.PORT : 5000;
 
 server.use(express.json());
 server.use(router);
